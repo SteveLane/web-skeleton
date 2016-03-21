@@ -1,0 +1,23 @@
+name : Stephen E Lane
+brand : Stephen E Lane
+description : Couldn't think of anything witty to write &#12483
+keyword : 
+url:              http://www.stephenelane.com
+baseurl:          /
+# email : 
+twitter : stephenelane
+github : SteveLane
+author : Stephen E Lane
+analytics : UA-56563625-1
+year : 2016
+# markdown : kramdown
+exclude :
+  - node_modules
+  - NonPostFiles
+
+paginate:         5
+paginate_path: "/blog/page:num"
+gems: [jekyll-paginate]
+
+# Permalinks
+permalink:        /:month/:title
