@@ -2,7 +2,7 @@
 layout: post
 title: Example post
 description: An example post for my site skeleton
-tags: generic
+tags: generic, test, many-tags
 comments: true
 ---
 
