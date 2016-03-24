@@ -2,13 +2,13 @@
 layout: default
 ---
 
-<div class="archive">
-  <h1 class="archive-title">{{ page.title }}</h1>
+<div class="category">
+  <h1 class="category-title">{{ page.title }}</h1>
   {{ content }}
 </div>
 
 <div class="row">
-  {% for tag in site.tags %}
+  {% for cat in site.categories %}
   <!-- <li style="font-size: {{ tag | last | size | times: 100 | divided_by: site.tags.size }} | plus: 70%"> -->
   <!--       <a href="/{{ tag | first | slugize }}/"> -->
   <!--           {{ tag | first }} -->
@@ -19,13 +19,13 @@ layout: default
   <!--   {{ tag | first }} -->
   <!-- </a> -->
 
-  {% assign t = tag | first %}
-  {% assign posts = tag | last %}
+  {% assign c = cat | first %}
+  {% assign posts = cat | last %}
 
-  <h3><i class = "fa fa-tag"></i><a name="{{ t }}"></a>&emsp;{{ t | downcase }}</h3>
+  <h3><i class = "fa fa-inbox"></i><a name="{{ c }}"></a>&emsp;{{ c | downcase }}</h3>
   <ul>
     {% for post in posts %}
-    {% if post.tags contains t %}
+    {% if post.categories contains c %}
     <li>
       <a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>
       <span class="date">{{ post.date | date: "%B %-d, %Y"  }}</span>
