@@ -7,41 +7,47 @@ layout: default
 <h2 class="post-title">{{ page.subtitle }}</h2>
 {% endif %}
 
-<div class="row">
-  <div class="large-9 small-12 columns">
-    {{ content }}
-  </div>
-  <div class="large-3 small-12 columns">
+<div class="sections">
+  <section id="first" data-magellan-target="first">
     <div class="row">
-      <i class="fa fa-calendar"></i>&ensp;{{ page.date | date_to_string }}
+      <div class="large-9 small-12 columns">
+	{{ content }}
+      </div>
+      <div class="large-3 small-12 columns" data-sticky-container>
+	<nav class="columns sticky" data-sticky data-anchor="first" data-sticky-on="large">
+	  <div class="row">
+	    <i class="fa fa-calendar"></i>&ensp;{{ page.date | date_to_string }}
+	  </div>
+	  {% if page.categories %}
+	  <div class="row">
+	    <i class="fa fa-inbox"></i>
+	    {% for cat in page.categories %}
+	    {% if forloop.last != true %}
+	    <a href="{{ site.baseurl }}blog/categories#{{ cat }}" title="View posts with category &quot;{{ cat }}&quot;">{{ cat }}</a>,
+	    {% else %}
+	    <a href="{{ site.baseurl }}blog/categories#{{ cat }}" title="View posts with category &quot;{{ cat }}&quot;">{{ cat }}</a>
+	    {% endif %}
+	    {% endfor %}
+	  </div>
+	  {% endif %}
+	  <div class="row">
+	    <i class="fa fa-tags"></i>
+	    {% for tag in page.tags %}
+	    {% if forloop.last != true %}
+	    <a href="{{ site.baseurl }}blog/archive#{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>,
+	    {% else %}
+	    <a href="{{ site.baseurl }}blog/archive#{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>
+	    {% endif %}
+	    {% endfor %}
+	  </div>
+	  <div class="row">
+	    <p class="quiet copyright left"> <a href="https://twitter.com/share" class="twitter-share-button" data-via="stephenelane" data-size="small"></a>
+	    </p>
+	  </div>
+	  </nav>
+      </div>
     </div>
-    {% if page.categories %}
-    <div class="row">
-      <i class="fa fa-inbox"></i>
-      {% for cat in page.categories %}
-      {% if forloop.last != true %}
-      <a href="{{ site.baseurl }}blog/categories#{{ cat }}" title="View posts with category &quot;{{ cat }}&quot;">{{ cat }}</a>,
-      {% else %}
-      <a href="{{ site.baseurl }}blog/categories#{{ cat }}" title="View posts with category &quot;{{ cat }}&quot;">{{ cat }}</a>
-      {% endif %}
-      {% endfor %}
-    </div>
-    {% endif %}
-    <div class="row">
-      <i class="fa fa-tags"></i>
-      {% for tag in page.tags %}
-      {% if forloop.last != true %}
-      <a href="{{ site.baseurl }}blog/archive#{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>,
-      {% else %}
-      <a href="{{ site.baseurl }}blog/archive#{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>
-      {% endif %}
-      {% endfor %}
-    </div>
-    <div class="row">
-      <p class="quiet copyright left"> <a href="https://twitter.com/share" class="twitter-share-button" data-via="stephenelane" data-size="small"></a>
-      </p>
-    </div>
-  </div>
+  </section>
 </div>
 
 <div class="row">
