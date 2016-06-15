@@ -23,9 +23,9 @@ layout: default
 	    <i class="fa fa-inbox"></i>
 	    {% for cat in page.categories %}
 	    {% if forloop.last != true %}
-	    <a href="{{ site.baseurl }}blog/categories#{{ cat }}" title="View posts with category &quot;{{ cat }}&quot;">{{ cat }}</a>,
+	    <a href="{{ site.baseurl }}/blog/categories#{{ cat }}" title="View posts with category &quot;{{ cat }}&quot;">{{ cat }}</a>,
 	    {% else %}
-	    <a href="{{ site.baseurl }}blog/categories#{{ cat }}" title="View posts with category &quot;{{ cat }}&quot;">{{ cat }}</a>
+	    <a href="{{ site.baseurl }}/blog/categories#{{ cat }}" title="View posts with category &quot;{{ cat }}&quot;">{{ cat }}</a>
 	    {% endif %}
 	    {% endfor %}
 	  </div>
@@ -34,9 +34,9 @@ layout: default
 	    <i class="fa fa-tags"></i>
 	    {% for tag in page.tags %}
 	    {% if forloop.last != true %}
-	    <a href="{{ site.baseurl }}blog/archive#{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>,
+	    <a href="{{ site.baseurl }}/blog/archive#{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>,
 	    {% else %}
-	    <a href="{{ site.baseurl }}blog/archive#{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>
+	    <a href="{{ site.baseurl }}/blog/archive#{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>
 	    {% endif %}
 	    {% endfor %}
 	  </div>

@@ -12,7 +12,7 @@ description: Index page for subpage
     <div class="large-6 small-6 columns">
       <ul class="list-unstyled">
 	{% for post in site.posts %}
-	<li> <a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a> 
+	<li> <a href="{{site.baseurl}}/{{ post.url }}">{{ post.title }}</a> 
 	  <span style="text-align:right"> {{ post.date | date_to_string }}</span></li>
 	{% endfor %}
       </ul>
@@ -26,9 +26,9 @@ description: Index page for subpage
 	    {% for cat in site.categories %}
 	    {% assign c = cat | first %}
 	    {% if forloop.last != true %}
-	    <a href="{{ site.baseurl }}categories#{{ c }}">{{ c | downcase }}</a>,
+	    <a href="{{ site.baseurl }}/categories#{{ c }}">{{ c | downcase }}</a>,
 	    {% else %}
-	    <a href="{{ site.baseurl }}categories#{{ c }}">{{ c | downcase }}</a>
+	    <a href="{{ site.baseurl }}/categories#{{ c }}">{{ c | downcase }}</a>
 	    {% endif %}
 	    {% endfor %}
 	  </div>
@@ -39,9 +39,9 @@ description: Index page for subpage
 	    {% for tag in site.tags %}
 	    {% assign t = tag | first %}
 	    {% if forloop.last != true %}
-	    <a href="{{ site.baseurl }}tags#{{ t }}">{{ t | downcase }}</a>,
+	    <a href="{{ site.baseurl }}/tags#{{ t }}">{{ t | downcase }}</a>,
 	    {% else %}
-	    <a href="{{ site.baseurl }}tags#{{ t }}">{{ t | downcase }}</a>
+	    <a href="{{ site.baseurl }}/tags#{{ t }}">{{ t | downcase }}</a>
 	    {% endif %}
 	    {% endfor %}
 	  </div>

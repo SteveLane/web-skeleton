@@ -3,7 +3,7 @@ brand : Stephen E Lane
 description : Couldn't think of anything witty to write &#12483
 keyword : 
 url:              http://www.stephenelane.com
-baseurl:          /
+baseurl:          /web-skeleton
 # email : 
 twitter : stephenelane
 github : SteveLane
@@ -20,4 +20,4 @@ exclude :
 # gems: [jekyll-paginate]
 
 # Permalinks
-permalink:        /:month/:title
+permalink:        :year/:month/:day/:title
