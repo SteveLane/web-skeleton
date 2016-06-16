@@ -1,0 +1,19 @@
+name : Stephen E Lane
+brand : Stephen E Lane
+description : Couldn't think of anything witty to write &#12483
+keyword : 
+url:              http://127.0.0.1:4000
+baseurl:          /web-skeleton
+# email : 
+twitter : stephenelane
+github : SteveLane
+author : Stephen E Lane
+analytics : UA-56563625-1
+year : 2016
+# markdown : kramdown
+exclude :
+  - node_modules
+  - NonPostFiles
+
+# Permalinks
+permalink:        :year/:month/:day/:title
